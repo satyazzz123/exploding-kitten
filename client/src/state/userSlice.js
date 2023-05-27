@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialUserState = {
 	entityId: null,
-	username: `RandomPlayer${Math.floor(Math.random() * 1000)}`,
+	username: `Kitten${Math.floor(Math.random() * 1000)}`,
 	score: 0,
 	noOfGamesPlayed: 0,
 };

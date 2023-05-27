@@ -3,19 +3,19 @@ import {userModel} from "../models/User";
 
 const router = express.Router();
 
-router.get("/:userId", async (req, res) => {
+router.get("/:userId", async (req: Request, res: Response) => {
 	try {
 		const { userId } = req.params;
 		const repository = await userModel;
 		const user = await repository.findById(userId);//findbyid
 		if (user) res.status(200).json(user);
-	
+		else throw new Error("user not found");
 	} catch (error) {
 		res.status(404).json({ msg: error });
 	}
 });
 
-router.get("/", async (req, res) => {//leaderobard score
+router.get("/", async (req: Request, res: Response) => {//leaderobard score
 	try {
 		const repository = await userModel;
 		const users = await repository.find({}).sort('score');//find
@@ -26,7 +26,7 @@ router.get("/", async (req, res) => {//leaderobard score
 	}
 });
 
-router.post("/", async (req, res) => {
+router.post("/", async (req: Request, res: Response) => {
 	try {
 		const { username } = req.body;
 		const repository = await userModel;

@@ -1,8 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@100;400;700&display=swap");
 
 * {
-	font-family: "Chivo Mono", monospace;
+	font-family: "Bebas Neue";
 	margin: 0;
+	background-color:	#211522;
+	color:#C197D2;
+
 }
 
 .app-playfield {
@@ -30,14 +33,14 @@
 .navbar {
 	padding: 1rem 2rem;
 	margin-bottom: 1rem;
-	background-color: #ffd102;
+	background-color: 	#211522;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	flex-wrap: wrap;
 	gap: 1rem;
 }
-
+/* that peach bg */
 .deck {
 	width: 100%;
 	margin-bottom: 1rem;
@@ -48,21 +51,23 @@
 	border-radius: 2rem;
 	min-height: 50vh;
 	max-height: 100%;
-	background-color: rgb(253, 246, 233);
+	background-color:	#211522;
 }
 
 /* .hidden:hover{
   transform: scale(1.1);
 } */
 
+
+/* //for cards */
 .card {
 	cursor: grab;
-	width: 7rem;
+	width: 8rem;
 	height: 10rem;
-	margin: 1rem;
+	margin:1rem;
 	border-radius: 10px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-	background-color: #fff;
+	background-color:#fff;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -73,19 +78,23 @@
 
 .cardContent {
 	font-size: xx-large;
+	background-color: #fff;
+	border-radius:"10px"
 }
 
+/* rotation animation */
 .card.notHidden {
-	transform: rotateY(-360deg);
+	transform: rotateX(-360deg);
 }
 
 .inventory {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-end;
-	gap: 0.5rem;
+	gap: 1rem;
 }
 
+/* //cards left diffuse cards etc */
 #leaderboard {
 	border-collapse: collapse;
 	/* width: 100%; */
@@ -150,9 +159,9 @@
 .statusButtons button {
 	font-size: large;
 	cursor: pointer;
-	border-radius: 100rem;
-	background-color: #ffd102;
-	padding: 0.5rem;
+	border-radius: 1rem;
+	background-image: #D3B1C2;
+	padding: 1rem;
 }
 
 .topBar {
@@ -182,4 +191,14 @@
 .formInput {
 	display: flex;
 	gap: 0.3rem;
+
+}
+.formInput input:focus{
+outline: none;
+
+
+}
+.formInput input{
+	color:#211522 ;
+	border-radius: 5px;
 }

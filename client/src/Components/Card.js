@@ -1,4 +1,9 @@
 import { useRef, useState, useEffect } from "react";
+import cat from "../Photos/cat.png";
+import bomb from "../Photos/bomb.png"
+import diffuser from "../Photos/diffuser.png"
+import reverse from "../Photos/reverse.png"
+import ques from "../Photos/ques.jpg"
 
 function Card({ onDraw, id, type, isClickable }) {
 	const [isHidden, setIsHidden] = useState(true);
@@ -20,28 +25,31 @@ function Card({ onDraw, id, type, isClickable }) {
 	}, [isClickable]);
 
 	let content;
-	if (isHidden) content = "❓";
+
+	
+	if (isHidden) content =ques;
+	
 	else {
 		switch (type) {
 			case "cat":
-				content = "😼";
+				content = cat;
 				break;
 			case "defuse":
-				content = "🙅‍♂️";
+				content = diffuser;
 				break;
 			case "bomb":
-				content = "💣";
+				content = bomb;
 				break;
 			case "shuffle":
-				content = "🔃";
+				content = reverse;
 				break;
 			default:
-				content = "❓";
+				content = ques;
 		}
 	}
 	return (
 		<span className={`card ${isHidden ? "hidden" : "notHidden"}`} ref={ref}>
-			<h2 className="cardContent">{content}</h2>
+			<h2 className="cardContent"><img style={{height:"10rem",width:"8rem",borderRadius:"10px"}} src={content} alt="" /></h2>
 		</span>
 	);
 }

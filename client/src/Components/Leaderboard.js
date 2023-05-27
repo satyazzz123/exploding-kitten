@@ -23,7 +23,7 @@ function Leaderboard() {
 	}, []);
 	return (
 		<div className="leaderboard">
-			<h2>Leaderboard: </h2>
+			<h2 style={{marginBottom:"5px"}}>LEADERBOARD </h2>
 			<table id="leaderboard">
 				<thead>
 					<tr>

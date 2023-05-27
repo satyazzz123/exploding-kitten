@@ -43,13 +43,14 @@ function Form() {
 							id="username"
 							value={username}
 							onChange={(e) => setUsername(e.target.value)}
+							style={{background:"#B175FF"}}
 						/>
-						<button aria-label="change username" onClick={handleSubmit}>
+						<button style={{background:"#B175FF",border:"none",color:"#211522",borderRadius:"5px",width:"5rem"}} aria-label="change username" onClick={handleSubmit}>
 							Change user
 						</button>
 					</>
 				)}
-				<button
+				<button style={{background:"#B175FF",border:"none",color:"#211522",borderRadius:"5px",width:"5rem"}}
 					aria-label="show input form"
 					onClick={() => setIsFormActive(!isFormActive)}
 				>
