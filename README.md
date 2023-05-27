@@ -21,7 +21,7 @@ This is an online single-player card game that consists of 4 different types of 
 
 - Users can create a username to enter the game and leaderboard is there to show how many games they won
 - Automatically saves the game for a user at every stage so the user can continue from where he left off last time.
--  Website created using Redux for state management which allows a player to draw a random card from the deck once the game is started.
+-  Website created using React and Redux for state management which allows a player to draw a random card from the deck once the game is started.
 - MongoDb is used to store all the user data and game data.
 - REST APIs created using express.
 
