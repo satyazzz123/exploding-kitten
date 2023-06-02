@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+
 function Leaderboard() {
 	const [playerData, setPlayerData] = useState([]);
 	const pollingInterval = 8000;

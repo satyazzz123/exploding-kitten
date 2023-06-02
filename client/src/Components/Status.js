@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { initGame, quitGame, selectGameStatus } from "../state/gameSlice";
-import {BsFillCalculatorFill} from "react-icons/bs"
+
 
 function Status() {
 	const gameStatus = useSelector(selectGameStatus);
